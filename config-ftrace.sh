@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# *** Should be run as root user (not sudo) ***
+
 clear_ftrace_configurations() {
     echo 0 >/sys/kernel/debug/tracing/tracing_on
     echo nop >/sys/kernel/debug/tracing/current_tracer
