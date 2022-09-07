@@ -34,16 +34,19 @@ run_menu() {
                 A)
                     if [ $selected_item -ge 1 ]; then
                         selected_item=$((selected_item - 1))
-                        print_menu
+                    else
+                        selected_item=$((menu_size - 1))
                     fi
                     ;;
                 B)
                     if [ $selected_item -lt $((menu_size - 1)) ]; then
                         selected_item=$((selected_item + 1))
-                        print_menu
+                    else
+                        selected_item=0
                     fi
                     ;;
                 esac
+                print_menu
             fi
             read -rsn5 -t 0.1
             ;;
