@@ -7,6 +7,11 @@ menu_items=(
     "three"
 )
 
+commands=(
+    'echo one'
+    'echo two'
+)
+
 menu_size=${#menu_items[@]}
 
 print_menu() {
@@ -62,17 +67,7 @@ selection_menu() {
     run_menu
     menu_result=$?
 
-    case "$menu_result" in
-    0)
-        echo 'Selection: one'
-        ;;
-    1)
-        echo 'Selection: two'
-        ;;
-    2)
-        echo 'Selection: three'
-        ;;
-    esac
+    eval ${commands[$menu_result]}
 }
 
 selection_menu
