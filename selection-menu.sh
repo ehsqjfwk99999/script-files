@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
+GREEN="\e[32m"
+UNDERLINE="\e[4m"
+ENDCOLOR="\e[0m"
+
 selected_item=0
+
 menu_items=(
     "one"
     "two"
     "three"
-    "exit"
 )
 
 commands=(
     'echo one'
     'echo two'
     'echo three'
-    'exit'
 )
 
 menu_size=${#menu_items[@]}
@@ -22,7 +25,7 @@ print_menu() {
 
     for ((i = 0; i < $menu_size; ++i)); do
         if [ $i = $selected_item ]; then
-            echo "-> ${menu_items[i]}"
+            echo -e "${GREEN}-> ${UNDERLINE}${menu_items[i]}${ENDCOLOR}"
         else
             echo "   ${menu_items[i]}"
         fi
@@ -57,6 +60,10 @@ run_menu() {
                 print_menu
             fi
             read -rsn5 -t 0.1
+            ;;
+        "q")
+            clear
+            exit
             ;;
         "")
             clear
