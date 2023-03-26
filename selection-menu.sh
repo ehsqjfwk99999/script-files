@@ -5,12 +5,14 @@ menu_items=(
     "one"
     "two"
     "three"
+    "exit"
 )
 
 commands=(
     'echo one'
     'echo two'
     'echo three'
+    'exit'
 )
 
 menu_size=${#menu_items[@]}
