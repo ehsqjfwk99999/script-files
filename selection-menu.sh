@@ -10,7 +10,7 @@ menu_items=(
     "one"
     "two"
     "three"
-    "code remote"
+    "code remote:/home/ksy"
 )
 
 commands=(
