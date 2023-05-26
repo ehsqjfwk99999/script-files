@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 GREEN="\e[32m"
 UNDERLINE="\e[4m"
