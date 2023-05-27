@@ -11,4 +11,6 @@ echo
 # unmount device
 echo -n "Unmount device ... "
 umount $DEVICE_PATH
-echo -e "${GREEN}Done${ENDCOLOR}\n"
+echo -e "${GREEN}Done${ENDCOLOR}"
+
+echo -e "\n${GREEN}Unmount Complete!${ENDCOLOR}\n"
