@@ -13,7 +13,7 @@ menu_items=(
 
 commands=(
     'sudo bash /home/ksy/.ksy/mount.sh'
-    'sudo umount /dev/nvme0n1'
+    'sudo bash /home/ksy/.ksy/unmount.sh'
 )
 
 menu_size=${#menu_items[@]}
