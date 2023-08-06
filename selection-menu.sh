@@ -10,14 +10,14 @@ menu_items=(
     "one"
     "two"
     "three"
-    "code remote:/home/ksy"
+    # "code remote:/home/ksy"
 )
 
 commands=(
     'echo one'
     'echo two'
     'echo three'
-    'code --folder-uri vscode-remote://ssh-remote+SERVER/home/ksy'
+    # 'code --folder-uri vscode-remote://ssh-remote+SERVER/home/ksy'
 )
 
 menu_size=${#menu_items[@]}
