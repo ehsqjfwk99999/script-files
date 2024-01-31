@@ -15,8 +15,12 @@ curl -LO https://go.dev/dl/go${version}.linux-amd64.tar.gz
 
 go_binary_release=go${version}.linux-amd64.tar.gz
 
-# remove previous binary and unzip new binary
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${go_binary_release}
+# remove previous binary and unzip new binary (need root privilege)
+if [ $(whoami) == 'root' ]; then
+    rm -rf /usr/local/go && tar -C /usr/local -xzf ${go_binary_release}
+else
+    sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${go_binary_release}
+fi
 
 # clean up
 rm -rf ${go_binary_release}
