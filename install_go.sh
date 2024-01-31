@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 GREEN="\e[32m"
 ENDCOLOR="\e[0m"
 
